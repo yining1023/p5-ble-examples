@@ -27,8 +27,7 @@ class p5BLE {
         return service.getCharacteristics();
       })
       .then(characteristics => {
-        console.log('Got LED Characteristic');
-        console.log('characteristics: ', characteristics);
+        console.log('Got Characteristic');
         callback(null, characteristics);
       })
       .catch(error => {
@@ -37,6 +36,12 @@ class p5BLE {
       });
   }
 
+  async read(characteristic, callback) {
+    const value = await characteristic.readValue();
+    return callback(null, value.getUint8(0));
+  }
+
+  // need callback/promise?
   write(characteristic, inputValue) {
     let bufferToSend = Uint8Array.of(inputValue);
     characteristic.writeValue(bufferToSend);
