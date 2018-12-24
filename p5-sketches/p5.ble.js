@@ -45,6 +45,6 @@ class p5BLE {
   write(characteristic, inputValue) {
     let bufferToSend = Uint8Array.of(inputValue);
     characteristic.writeValue(bufferToSend);
-    console.log('Writing '+ inputValue + ' to led Characteristic...');
+    console.log('Writing '+ inputValue + ' to Characteristic...');
   }
 }
