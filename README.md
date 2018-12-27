@@ -9,7 +9,9 @@ git clone https://github.com/yining1023/p5-ble-examples.git
 ```
 
 Change directory into the new folder and start a server.
-An easy way to start a server is with python. If you are have python 2:
+An easy way to start a server is with python.
+
+If you are have python 2:
 ```
 cd p5-ble-examples
 python -m SimpleHTTPServer
