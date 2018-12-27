@@ -1,6 +1,6 @@
 // The serviceUuid must match the serviceUuid of the device you would like to connect
 const serviceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
-let ledCharacteristic;
+let myCharacteristic;
 let input;
 
 function setup() {
@@ -27,12 +27,12 @@ function connectToBle() {
 function gotCharacteristics(error, characteristics) {
   if (error) console.log('error: ', error);
   console.log('characteristics: ', characteristics);
-  // Set the first characteristic as ledCharacteristic
-  ledCharacteristic = characteristics[0];
+  // Set the first characteristic as myCharacteristic
+  myCharacteristic = characteristics[0];
 }
 
 function writeToBle() {
   const inputValue = input.value();
-  // Write the value of the input to the ledCharacteristic
-  p5ble.write(ledCharacteristic, inputValue);
+  // Write the value of the input to the myCharacteristic
+  p5ble.write(myCharacteristic, inputValue);
 }
