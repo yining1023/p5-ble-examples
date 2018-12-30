@@ -1,4 +1,9 @@
 // The serviceUuid must match the serviceUuid of the device you would like to connect
+// Copyright (c) 2018 p5ble
+//
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
 const serviceUuid = "19b10000-e8f2-537e-4f6c-d104768a1214";
 let myCharacteristic;
 let input;
