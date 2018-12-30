@@ -50,4 +50,7 @@ function read() {
     // Write value on the canvas
     text(myValue, 100, 100);
   });
+  // You can also pass in the dataType
+  // Options: 'unit8', 'uint16', 'uint32', 'int8', 'int16', 'int32', 'float32', 'float64', 'string'
+  // myBLE.read(myCharacteristic, 'string').then(value => {...})
 }

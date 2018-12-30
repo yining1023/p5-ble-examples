@@ -43,6 +43,9 @@ function gotValue(error, value) {
   myValue = value;
   // After getting a value, call p5ble.read() again to get the value again
   myBLE.read(myCharacteristic, gotValue);
+  // You can also pass in the dataType
+  // Options: 'unit8', 'uint16', 'uint32', 'int8', 'int16', 'int32', 'float32', 'float64', 'string'
+  // myBLE.read(myCharacteristic, 'string', gotValue);
 }
 
 function draw() {

@@ -42,6 +42,9 @@ async function connectToBle() {
 async function read() {
   // Read the value of the characteristic
   myValue = await myBLE.read(myCharacteristic);
+  // You can also pass in the dataType
+  // Options: 'unit8', 'uint16', 'uint32', 'int8', 'int16', 'int32', 'float32', 'float64', 'string'
+  // myValue = await myBLE.read(myCharacteristic, 'string');
   background(250);
   // Write value on the canvas
   text(myValue, 100, 100);

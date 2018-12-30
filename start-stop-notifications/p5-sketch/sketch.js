@@ -39,6 +39,9 @@ function gotCharacteristics(error, characteristics) {
   // Start notifications on the first characteristic by passing the characteristic
   // And a callback function to handle notifications
   myBLE.startNotifications(myCharacteristic, handleNotifications);
+  // You can also pass in the dataType
+  // Options: 'unit8', 'uint16', 'uint32', 'int8', 'int16', 'int32', 'float32', 'float64', 'string'
+  // myBLE.startNotifications(myCharacteristic, handleNotifications, 'string');
 }
 
 // A function that will be called once got characteristics
