@@ -1,5 +1,5 @@
 # p5-ble-examples
-Examples for [p5.ble.js](https://github.com/yining1023/p5.ble.js)
+Examples for [p5.ble.js](https://github.com/yining1023/p5.ble.js), read more at [p5 ble website](https://yining1023.github.io/p5ble-website).
 
 ## Usage
 
